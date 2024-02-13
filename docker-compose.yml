@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  api:
+    container_name: datagate-autoupdater
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    env_file:
+      - .env
+    platform: "linux/arm64"
